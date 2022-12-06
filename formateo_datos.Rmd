@@ -29,7 +29,7 @@ df_datos = function(archivo){
   # Ciclo que lee todos los archivos y los formatea
   for (i in 1:length(archivo)) {
     # Se leen los archivos de la computadora
-    df = read.csv(archivo[i])
+    df = read.csv(paste0("datos/",archivo[i]))
     # Ya que algunos archivos tienen una estructura especial son
     # tratados de distinta manera
     if(archivo[i] == "migration-flows.csv"){
