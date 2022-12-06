@@ -1,0 +1,147 @@
+---
+title: "Formateo de datos de Our World in Data"
+author: "Sacbe García"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Our World in Data
+
+Our World in Data es una organización de investigación sin fines de lucro que se dedica a publicar información sobre el mundo en línea. La organización trabaja para proporcionar información de alta calidad y accesible sobre temas importantes, como el cambio climático, la salud, la educación y la pobreza, con el objetivo de contribuir a una mejor comprensión del mundo en que vivimos. Our World in Data utiliza una combinación de investigación y análisis de datos para crear visualizaciones y gráficos que ayuden a los usuarios a comprender y explorar estos temas de manera más efectiva.
+
+## Carga de datos
+
+La carga de datos para el análisis de datos se refiere al proceso de adquirir y preparar los datos para su análisis. Esto puede incluir la adquisición de datos desde diversas fuentes, como bases de datos o archivos, así como la limpieza y transformación de los datos para que puedan ser utilizados de manera efectiva en el análisis.
+
+```{r}
+# Función que realiza la limpieza de datos cargados y genera una 
+# lista con los dataframes limpios generados en la función.
+# La entrada de la función son los nombres de los conjuntos de
+# datos con su respectiva extensión csv.
+
+df_datos = function(archivo){
+  # Se crea la lista donde se guardaran los dataframes
+  lista_df = list()
+  # Ciclo que lee todos los archivos y los formatea
+  for (i in 1:length(archivo)) {
+    # Se leen los archivos de la computadora
+    df = read.csv(archivo[i])
+    # Ya que algunos archivos tienen una estructura especial son
+    # tratados de distinta manera
+    if(archivo[i] == "migration-flows.csv"){
+      # Se selecciona el país
+      df = df[df$Country == "Mexico",]
+      # Se seleccionan las columnas con la cantidad de emigrantes
+      # que vienen a quedarse en México.
+      df = subset(df, select = -seq(4,ncol(df),2))
+      # Se elimina la columna que es redundate, ya que el paìs
+      # seleccionado es México
+      df = subset(df, select = -c(Emigrants.from.Mexico))
+      # Se calcula es total de emigrantes sumando la cantidad
+      # que emigrantes por país de origen.
+      df = data.frame(Year = df$Year,
+                      Total_migrantes =
+                        rowSums(df[,3:ncol(df)], na.rm=TRUE))
+    }
+    else if(archivo[i] == "human-rights-vdem.csv"){
+      # Se selecciona el país de interés
+      df = df[df$Entity == "Mexico",]
+      # Se eliminan las columnas que no son de interés ya que se
+      # toma el promedio de las mismas
+      df = subset(df, select = -c(Entity,
+                                  Code,
+                                  civ_libs_vdem_high_owid,
+                                  civ_libs_vdem_low_owid))
+    }
+    else if(archivo[i] == "democracy.csv"){
+      # Se selecciona el país de interés
+      df = df[df$Entity == "Mexico",]
+      # Se eliminan las columnas que no son de interés ya que se
+      # toma el promedio de las mismas
+      df = subset(df, select = -c(Entity,
+                                  Code,
+                                  electdem_vdem_high_owid,
+                                  electdem_vdem_low_owid))
+    }
+    else{
+      # Se selecciona el país de interés
+      df = df[df$Entity == "Mexico",]
+      # Se eliminan las columnas que no son de interés para el
+      # análisis
+      df = subset(df, select = -c(Entity,Code))
+    }
+    # Se genera la lista con los dataframes
+    lista_df[[i]] = df
+  }
+  # Se retorna la lista generada
+  return(lista_df)
+}
+```
+
+```{r}
+
+#archivos = c("corruption.csv", "democracy.csv",
+#             "human_rights.csv", "pisa_math.csv",
+#             "economic-inequality-gini-index.csv",
+#             "share-of-individuals-using-the-internet.csv",
+#             "migration-flows.csv", "armed-forces-personnel.csv",
+#             "total-government-expenditure-on-education-gdp.csv",
+#             "military-expenditure-total.csv")
+
+archivos = c("TI-corruption-perception-index.csv", "democracy.csv",
+             "human-rights-vdem.csv",
+             "pisa-test-score-mean-performance-on-the-mathematics-scale.csv",
+             "economic-inequality-gini-index.csv",
+             "share-of-individuals-using-the-internet.csv",
+             "migration-flows.csv", "armed-forces-personnel.csv",
+             "total-government-expenditure-on-education-gdp.csv",
+             "military-expenditure-total.csv")
+
+# Se realiza la limpieza de los datos
+lista = df_datos(archivos)
+#lista
+```
+
+
+## Formateo de datos
+
+El formateo de datos es el proceso de preparar los datos para su análisis o uso en una aplicación específica. Esto puede incluir la limpieza de los datos para eliminar valores inválidos o duplicados, la transformación de los datos para que sean consistentes y fáciles de analizar, y la organización de los datos en un formato específico para su uso en una herramienta de análisis de datos o una aplicación. 
+
+```{r}
+# Función que une los distintos dataframes con base en el año
+merge_df = function(list_df){
+  # Se unen los dos primeros dataframes por años de la lista de
+  # dataframes. La unión puede generar elementos NULL, estos se
+  # llenaran con interpolación.
+  # No se usa la intersección ya que la tabla final puede reducirse
+  # demasiado.
+  df_merge = merge(list_df[[1]], list_df[[2]],
+                    by="Year", all.x=TRUE, all.y = TRUE)
+  for (i in 3:length(list_df)){
+    df_merge = merge(df_merge, list_df[[i]],
+                    by="Year", all.x=TRUE, all.y = TRUE)
+  }
+  return(df_merge)
+}
+```
+
+
+```{r}
+# Se llama la función que une los dataframes de una lista
+df = merge_df(lista)
+# Se renombran las columnas del dataframe para que sean más legibles
+names(df) = c("Year","Index_corruption",
+               "Index_democracy", "Index_hr",
+               "PISA","Gini_economic_inequality",
+               "Population_internet", "Emigration",
+               "num_army_forces","expenditure_education",
+               "military_expenditure")
+# Se guarda el dataframe generado
+write.csv(df,"indicadores_mexico.csv", row.names = FALSE)
+```
+
+
