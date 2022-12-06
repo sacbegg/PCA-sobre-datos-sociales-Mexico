@@ -5,7 +5,7 @@ Proyecto final de álgebra matricial de la Maestría en Cómputo Estadístico CI
 ## Cómo utilizar el repositorio
 
 1. Ejecutar **formateo_datos.Rmd**, este script permitirá formatear los datos crudos y generar el dataframe final **indicadores_mexico.csv**.
-2. Ejecutar **pca_index_mexico.ipynb**, este notebook mostrará los pasos necesarios en el análisis y las gráficas obtenidas del mismo para llegar a la conclusión del proyecto.
+2. Ejecutar **pca_index_mexico.ipynb**, este notebook mostrará los pasos necesarios en el análisis y las gráficas obtenidas del mismo para llegar a la conclusión del proyecto. Se requiere instalar la librería pca para la visualización del análisis, las instrucciones vienen dentro del archivo pca_index_mexico.ipynb en la sección análisis de componentes principales.
 
 ## Fuente de los datos y significado
 
