@@ -104,9 +104,23 @@ Aplicar análisis de componentes principales sobre este tipo de datos podría ay
 Esto podría permitir a un gobernante de un país enfocarse ya sea en los indicadores más problematicos o aquellos tales que su varianza influye directamente en el progreso y bienestar del país y sus ciudadanos.
 
 ## Resultados
+Los resultados de forma breve se muestran a continuación, para más detalles ejecutar el archivo **pca_index_mexico.ipynb**.
+
+En la gráfica siguiente se puede observar que que las caracteristicas que están en el mismo cuadrante que la variable
+**PISA** son el número de fuerzas armadas en México y el gasto en educación, siendo estas, además, las caracteristicas que más varianza aportan a los dos primeros componentes principales.
+
+Esto quiere decir que estas variables estan altamente correlacionadas entre sí o que hay algún patrón subyacente entre ellas ya que están capturando la misma información o varianza en los datos originales, esto puede deberse a que tienen un patrón de variación similar.
 
 ![Análisis de componentes principales sobre los datos](/Gráficas/PCA.png)
+    
+En el mapa de calor se calcula la correlación de todas las variables y en particular se muestra la correlación de la puntuación PISA con las demás caracteristicas. Se puede observar con más detalle que de un rango de -1 a 1 el número de fuerzas armadas tiene una correlación de 0.6 positiva, y que el gasto en educación tiene una correlación de 0.49 postiva con respecto a la puntuación en matemáticas, mostrando que hay una relación moderada.
+    
+![Mapa de correlación](/Gráficas/correlation.png)
 
+Gráficando las carateristicas se puede notar que siguen un mismo patrón, ya que al subir o bajar uno también lo hacen las demás. Compronado así que existe algún patrón de comportamiento subyancente en estas variables como mostraba el PCA y la correlación.
+
+![Gráfica de caracteristicas de interés](/Gráficas/index.png)
+    
 ## Conlusiones
 
 Del análisis hecho se puede concluir que de los diez índices sociales de México extraídos de la página Our World Data, el número de fuerzas armadas y el gasto en educación son las características con mayor peso en los datos con respecto a la varianza, ya que son las variables que más cargan los componentes principales en dos dimensiones, qué además, logran explicar poco más de un 85% de la varianza total de los datos.
