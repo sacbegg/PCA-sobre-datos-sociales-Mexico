@@ -6,7 +6,8 @@ Proyecto final de álgebra matricial de la Maestría en Cómputo Estadístico CI
 
 - TI-corruption-perception-index.csv:
     - Link: https://ourworldindata.org/corruption
-    - El Índice de Percepción de la Corrupción puntúa a los países en una escala de 0 a 100, en la que 0 significa que
+    - **Where is perceived corruption highest?** El Índice de Percepción de la Corrupción puntúa a los países en una
+    escala de 0 a 100, en la que 0 significa que
     un país se percibe como muy corrupto y 100 significa que un país se percibe como muy limpio. El indicador es
     representativo de la opinión de los expertos, ya que se construye tomando las medias de varias encuestas
     estandarizadas a expertos, incluidas las de la Fundación Bertelsmann, el Foro Económico Mundial, el Banco Mundial
