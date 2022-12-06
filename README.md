@@ -14,8 +14,6 @@ Proyecto final de álgebra matricial de la Maestría en Cómputo Estadístico CI
 - democracy.csv:
     - Link: https://ourworldindata.org/democracy
 
-Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
-
 ## ¿Qué son los indicadores sociales?
 
 Los indicadores sociales son un conjunto de medidas cuantitativas que se utilizan para evaluar el desempeño social de un país. Estos indicadores pueden abarcar una amplia gama de temas, como la salud, la educación, la economía, el empleo, la pobreza, la desigualdad, la violencia, el bienestar social, entre otros. La idea es que los indicadores sociales permitan identificar las fortalezas y debilidades de un país en relación a su desarrollo social, y que proporcionen información valiosa para la toma de decisiones y la implementación de políticas públicas encaminadas a mejorar el bienestar de la sociedad.
