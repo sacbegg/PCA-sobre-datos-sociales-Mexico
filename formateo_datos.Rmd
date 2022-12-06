@@ -12,7 +12,9 @@ knitr::opts_chunk$set(echo = TRUE)
 # Our World in Data
 
 Our World in Data es una organización de investigación sin fines de lucro que se dedica a publicar información sobre el mundo en línea.
-La organización trabaja para proporcionar información de alta calidad y accesible sobre temas importantes, como el cambio climático, la salud, la educación y la pobreza, con el objetivo de contribuir a una mejor comprensión del mundo en que vivimos.
+
+La organización trabaja para proporcionar información de alta calidad y accesible sobre temas importantes, como el cambio climático,la salud, la educación y la pobreza, con el objetivo de contribuir a una mejor comprensión del mundo en que vivimos.
+
 Our World in Data utiliza una combinación de investigación y análisis de datos para crear visualizaciones y gráficos que ayuden a los usuarios a comprender y explorar estos temas de manera más efectiva.
 
 ## Carga de datos
