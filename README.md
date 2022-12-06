@@ -2,6 +2,20 @@
 
 Proyecto final de álgebra matricial de la Maestría en Cómputo Estadístico CIMAT Monterrey.
 
+## Fuente de los datos y significado
+
+- TI-corruption-perception-index.csv:
+    - Link: https://ourworldindata.org/corruption
+    - El Índice de Percepción de la Corrupción puntúa a los países en una escala de 0 a 100, en la que 0 significa que
+    un país se percibe como muy corrupto y 100 significa que un país se percibe como muy limpio. El indicador es
+    representativo de la opinión de los expertos, ya que se construye tomando las medias de varias encuestas
+    estandarizadas a expertos, incluidas las de la Fundación Bertelsmann, el Foro Económico Mundial, el Banco Mundial
+    y muchas otras.
+- democracy.csv:
+    - Link: https://ourworldindata.org/democracy
+
+Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
+
 ## ¿Qué son los indicadores sociales?
 
 Los indicadores sociales son un conjunto de medidas cuantitativas que se utilizan para evaluar el desempeño social de un país. Estos indicadores pueden abarcar una amplia gama de temas, como la salud, la educación, la economía, el empleo, la pobreza, la desigualdad, la violencia, el bienestar social, entre otros. La idea es que los indicadores sociales permitan identificar las fortalezas y debilidades de un país en relación a su desarrollo social, y que proporcionen información valiosa para la toma de decisiones y la implementación de políticas públicas encaminadas a mejorar el bienestar de la sociedad.
@@ -37,4 +51,26 @@ La forma matemática de calcular las componentes principales de un conjunto de d
 <div>
     
 En la imagen superioir se muestra PCA aplicado a una distribución normal multivariante centrada en (1,3) con desviación estándar 3 en la dirección aproximada (0,866, 0,5) y desviación estándar 1 en la dirección perpendicular a la anterior. Los vectores muestran los autovectores de la matriz de correlación escalados mediante la raíz cuadrada del correspondiente autovalor, y desplazados para que su origen coincidan con la media estadística.
+
+## ¿Cómo puede ayudar aplicar PCA sobre indicadores sociales?
+
+Aplicar análisis de componentes principales sobre este tipo de datos podría ayudar a identificar las caracterisitcas más importantes para entender o predecir ciertos comportamientos sociales más influyentes de un país (los componentes principales), en este caso México. 
+Esto podría permitir a un gobernante de un país enfocarse ya sea en los indicadores más problematicos o aquellos tales que su varianza influye directamente en el progreso y bienestar del país y sus ciudadanos.
+
+## Conlusiones
+
+Del análisis hecho se puede concluir que de los diez índices sociales de México extraídos de la página Our World Data, el número de fuerzas armadas y el gasto en educación son las características con mayor peso en los datos con respecto a la varianza, ya que son las variables que más cargan los componentes principales en dos dimensiones, qué además, logran explicar poco más de un 85% de la varianza total de los datos.
+
+Por otro lado, resulta que estas mismas características están en el mismo cuadrante que la puntuación PISA de matemáticas en México y que en adición se correlacionan moderadamente y de forma positiva, mostrando que hay un patrón subyacente en las mismas.
+
+De lo anterior podría decirse que un aumento en el gasto de educación genera un aumento en la puntuación PISA, sin embargo, resulta contradictorio decir que un aumento en el número de fuerzas armadas generaría un aumento en la destreza matemática de los adolescentes, por ello es importante mencionar que correlación no implica causalidad y que habría que hacer un análisis más profundo de los datos. 
+
+## Límitaciones del análisis
+
+Algunas limitaciones del análisis son las siguientes:
+
+- Análisis con poca cantidad de índices sociales del país
+- Pocos registros históricos para cada índice social
+- Se realizó interpolación lineal para rellenar los datos faltantes, pudiendo esto afectar la calidad de los dato
+
 
