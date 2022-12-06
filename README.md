@@ -4,7 +4,8 @@ Proyecto final de álgebra matricial de la Maestría en Cómputo Estadístico CI
 
 ## Cómo utilizar el repositorio
 
-1. Ejecutar 
+1. Ejecutar **formateo_datos.Rmd**, este script permitira formatear los datos crudos y generar el dataframe final **indicadores_mexico.csv**.
+2. Ejecutar **pca_index_mexico.ipynb**, este notebook mostrará los pasos necesarios en el análisis y las gráficas obtenidas del mismo para llegar a la conclusión del proyecto.
 
 ## Fuente de los datos y significado
 
@@ -117,5 +118,3 @@ Algunas limitaciones del análisis son las siguientes:
 - Análisis con poca cantidad de índices sociales del país
 - Pocos registros históricos para cada índice social
 - Se realizó interpolación lineal para rellenar los datos faltantes, pudiendo esto afectar la calidad de los dato
-
-
