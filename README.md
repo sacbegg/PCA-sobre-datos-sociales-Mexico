@@ -96,7 +96,7 @@ La forma matemática de calcular las componentes principales de un conjunto de d
     <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/GaussianScatterPCA.svg/1024px-GaussianScatterPCA.svg.png width="400"/>
 <div>
     
-En la imagen superioir se muestra PCA aplicado a una distribución normal multivariante centrada en (1,3) con desviación estándar 3 en la dirección aproximada (0,866, 0,5) y desviación estándar 1 en la dirección perpendicular a la anterior. Los vectores muestran los autovectores de la matriz de correlación escalados mediante la raíz cuadrada del correspondiente autovalor, y desplazados para que su origen coincidan con la media estadística.
+En la imagen superior se muestra PCA aplicado a una distribución normal multivariante centrada en (1,3) con desviación estándar 3 en la dirección aproximada (0,866, 0,5) y desviación estándar 1 en la dirección perpendicular a la anterior. Los vectores muestran los autovectores de la matriz de correlación escalados mediante la raíz cuadrada del correspondiente autovalor, y desplazados para que su origen coincidan con la media estadística.
 
 ## ¿Cómo puede ayudar aplicar PCA sobre indicadores sociales?
 
@@ -135,4 +135,4 @@ Algunas limitaciones del análisis son las siguientes:
 
 - Análisis con poca cantidad de índices sociales del país
 - Pocos registros históricos para cada índice social
-- Se realizó interpolación lineal para rellenar los datos faltantes, pudiendo esto afectar la calidad de los dato
+- Se realizó interpolación lineal para rellenar los datos faltantes, pudiendo esto afectar la calidad de los datos
