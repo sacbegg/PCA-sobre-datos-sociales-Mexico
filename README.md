@@ -103,6 +103,10 @@ En la imagen superioir se muestra PCA aplicado a una distribución normal multiv
 Aplicar análisis de componentes principales sobre este tipo de datos podría ayudar a identificar las caracterisitcas más importantes para entender o predecir ciertos comportamientos sociales más influyentes de un país (los componentes principales), en este caso México. 
 Esto podría permitir a un gobernante de un país enfocarse ya sea en los indicadores más problematicos o aquellos tales que su varianza influye directamente en el progreso y bienestar del país y sus ciudadanos.
 
+## Resultados
+
+![Análisis de componentes principales sobre los datos](/Gráficas/PCA.png)
+
 ## Conlusiones
 
 Del análisis hecho se puede concluir que de los diez índices sociales de México extraídos de la página Our World Data, el número de fuerzas armadas y el gasto en educación son las características con mayor peso en los datos con respecto a la varianza, ya que son las variables que más cargan los componentes principales en dos dimensiones, qué además, logran explicar poco más de un 85% de la varianza total de los datos.
