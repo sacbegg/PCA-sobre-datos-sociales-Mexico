@@ -4,7 +4,7 @@ Proyecto final de álgebra matricial de la Maestría en Cómputo Estadístico CI
 
 ## Cómo utilizar el repositorio
 
-1. Ejecutar **formateo_datos.Rmd**, este script permitira formatear los datos crudos y generar el dataframe final **indicadores_mexico.csv**.
+1. Ejecutar **formateo_datos.Rmd**, este script permitirá formatear los datos crudos y generar el dataframe final **indicadores_mexico.csv**.
 2. Ejecutar **pca_index_mexico.ipynb**, este notebook mostrará los pasos necesarios en el análisis y las gráficas obtenidas del mismo para llegar a la conclusión del proyecto.
 
 ## Fuente de los datos y significado
@@ -100,28 +100,28 @@ En la imagen superior se muestra PCA aplicado a una distribución normal multiva
 
 ## ¿Cómo puede ayudar aplicar PCA sobre indicadores sociales?
 
-Aplicar análisis de componentes principales sobre este tipo de datos podría ayudar a identificar las caracterisitcas más importantes para entender o predecir ciertos comportamientos sociales más influyentes de un país (los componentes principales), en este caso México. 
-Esto podría permitir a un gobernante de un país enfocarse ya sea en los indicadores más problematicos o aquellos tales que su varianza influye directamente en el progreso y bienestar del país y sus ciudadanos.
+Aplicar análisis de componentes principales sobre este tipo de datos podría ayudar a identificar las características más importantes para entender o predecir ciertos comportamientos sociales más influyentes de un país (los componentes principales), en este caso México. 
+Esto podría permitir a un gobernante de un país enfocarse ya sea en los indicadores más problemáticos o aquellos tales que su varianza influye directamente en el progreso y bienestar del país y sus ciudadanos.
 
 ## Resultados
 Los resultados de forma breve se muestran a continuación, para más detalles ejecutar el archivo **pca_index_mexico.ipynb**.
 
-En la gráfica siguiente se puede observar que que las caracteristicas que están en el mismo cuadrante que la variable
-**PISA** son el número de fuerzas armadas en México y el gasto en educación, siendo estas, además, las caracteristicas que más varianza aportan a los dos primeros componentes principales.
+En la gráfica siguiente se puede observar que que las características que están en el mismo cuadrante que la variable
+**PISA** son el número de fuerzas armadas en México y el gasto en educación, siendo estas, además, las características que más varianza aportan a los dos primeros componentes principales.
 
-Esto quiere decir que estas variables estan altamente correlacionadas entre sí o que hay algún patrón subyacente entre ellas ya que están capturando la misma información o varianza en los datos originales, esto puede deberse a que tienen un patrón de variación similar.
+Esto quiere decir que estas variables están altamente correlacionadas entre sí o que hay algún patrón subyacente entre ellas ya que están capturando la misma información o varianza en los datos originales, esto puede deberse a que tienen un patrón de variación similar.
 
 ![Análisis de componentes principales sobre los datos](/Gráficas/PCA.png)
     
-En el mapa de calor se calcula la correlación de todas las variables y en particular se muestra la correlación de la puntuación PISA con las demás caracteristicas. Se puede observar con más detalle que de un rango de -1 a 1 el número de fuerzas armadas tiene una correlación de 0.6 positiva, y que el gasto en educación tiene una correlación de 0.49 postiva con respecto a la puntuación en matemáticas, mostrando que hay una relación moderada.
+En el mapa de calor se calcula la correlación de todas las variables y en particular se muestra la correlación de la puntuación PISA con las demás características. Se puede observar con más detalle que de un rango de -1 a 1 el número de fuerzas armadas tiene una correlación de 0.6 positiva, y que el gasto en educación tiene una correlación de 0.49 positiva con respecto a la puntuación en matemáticas, mostrando que hay una relación moderada.
     
 ![Mapa de correlación](/Gráficas/correlation.png)
 
-Gráficando las carateristicas se puede notar que siguen un mismo patrón, ya que al subir o bajar uno también lo hacen las demás. Compronado así que existe algún patrón de comportamiento subyancente en estas variables como mostraba el PCA y la correlación.
+Gráficando las características se puede notar que siguen un mismo patrón, ya que al subir o bajar uno también lo hacen las demás. Comprobando así que existe algún patrón de comportamiento subyacente en estas variables como mostraba el PCA y la correlación.
 
-![Gráfica de caracteristicas de interés](/Gráficas/index.png)
+![Gráfica de características de interés](/Gráficas/index.png)
     
-## Conlusiones
+## Conclusiones
 
 Del análisis hecho se puede concluir que de los diez índices sociales de México extraídos de la página Our World Data, el número de fuerzas armadas y el gasto en educación son las características con mayor peso en los datos con respecto a la varianza, ya que son las variables que más cargan los componentes principales en dos dimensiones, qué además, logran explicar poco más de un 85% de la varianza total de los datos.
 
@@ -129,7 +129,7 @@ Por otro lado, resulta que estas mismas características están en el mismo cuad
 
 De lo anterior podría decirse que un aumento en el gasto de educación genera un aumento en la puntuación PISA, sin embargo, resulta contradictorio decir que un aumento en el número de fuerzas armadas generaría un aumento en la destreza matemática de los adolescentes, por ello es importante mencionar que correlación no implica causalidad y que habría que hacer un análisis más profundo de los datos. 
 
-## Límitaciones del análisis
+## Limitaciones del análisis
 
 Algunas limitaciones del análisis son las siguientes:
 
