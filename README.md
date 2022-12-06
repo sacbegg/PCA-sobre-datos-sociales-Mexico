@@ -2,6 +2,10 @@
 
 Proyecto final de álgebra matricial de la Maestría en Cómputo Estadístico CIMAT Monterrey.
 
+## Cómo utilizar el repositorio
+
+1. Ejecutar 
+
 ## Fuente de los datos y significado
 
 - TI-corruption-perception-index.csv:
@@ -14,6 +18,48 @@ Proyecto final de álgebra matricial de la Maestría en Cómputo Estadístico CI
     y muchas otras.
 - democracy.csv:
     - Link: https://ourworldindata.org/democracy
+    - **Electoral democracy, 2021** Basado en las evaluaciones de expertos y el índice de V-Dem. Indica hasta qué
+    punto se elige a los dirigentes políticos con un amplio derecho de voto en elecciones libres y justas, y se
+    garantizan las libertades de asociación y expresión. Oscila entre 0 y 1 (más democrático).
+- human-rights-vdem.csv
+    - Link: https://ourworldindata.org/human-rights
+    - **Human rights, 2021** Basado en las evaluaciones de expertos y el índice de V-Dem. Capta hasta qué punto las
+    personas están libres de torturas gubernamentales, asesinatos políticos y trabajos forzados, tienen derechos de
+    propiedad y disfrutan de las libertades de circulación, religión, expresión y asociación. Las variables oscilan
+    entre 0 y 1 (la mayoría de los derechos).
+- pisa-test-score-mean-performance-on-the-mathematics-scale.csv
+    - Link: https://ourworldindata.org/quality-of-education
+    - **PISA test score: Mean performance on the mathematics scale, 2015** (Programme for International Student
+    Assessment) Puntuación media de los alumnos de 15 años en la escala de matemáticas de PISA. La métrica para la
+    escala global de matemáticas se basa en una media de los países de la OCDE de 500 puntos y una desviación típica
+    de 100 puntos.
+- economic-inequality-gini-index.csv
+    - Link: https://ourworldindata.org/income-inequality
+    - **Income inequality around the world** El coeficiente de Gini es una medida de la desigualdad de la
+    distribución de la renta en una población. Los valores más altos indican un mayor nivel de desigualdad.
+- share-of-individuals-using-the-internet.csv
+    - Link: https://ourworldindata.org/grapher/share-of-individuals-using-the-internet
+    - **How many Internet users does each country have?** Porcentaje de la población que utiliza Internet.
+    Los usuarios de Internet son aquellos que han utilizado Internet desde cualquier lugar en los últimos tres meses.
+- migration-flows.csv
+    - Link: https://ourworldindata.org/migration
+    - **Emigrants from Mexico: Where did they move to?, 2020** El número total de personas nacidas en México que
+    ahora viven en otro país. Se trata de una medida de las existencias de emigrantes, no del flujo anual de
+    emigrantes. El valor para México es el total de emigrantes que viven en otro país.
+- armed-forces-personnel.csv
+    - Link: https://ourworldindata.org/grapher/armed-forces-personnel
+    - **Armed forces personnel, 2019** El personal de las fuerzas armadas es el personal militar en servicio activo,
+    incluidas las fuerzas paramilitares si el adiestramiento, la organización, el equipo y el control sugieren que
+    pueden utilizarse para apoyar o sustituir a las fuerzas militares regulares.
+- total-government-expenditure-on-education-gdp.csv
+    - Link: https://ourworldindata.org/grapher/total-government-expenditure-on-education-gdp
+    - **Total government expenditure on education, 1970 to 2019** Gasto público total en educación (todos los niveles
+    de gobierno y todos los niveles de educación), expresado en porcentaje del PIB.
+- military-expenditure-total.csv
+    - Link: https://ourworldindata.org/grapher/military-expenditure-total
+    - **Military expenditure, 2020** El gasto militar se mide en dólares constantes de 2019. Estos datos pretenden
+    incluir todo el gasto en fuerzas y actividades militares actuales.
+    
 
 ## ¿Qué son los indicadores sociales?
 
