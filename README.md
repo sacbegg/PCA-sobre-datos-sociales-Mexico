@@ -1,6 +1,6 @@
 # Análisis de componentes principales aplicado a índices sociales de México y su relación con la prueba PISA de matemáticas
 
-Se realizó analisis de componentes principales sobre indices sociales de México extraídos de Our World In Data, estos datos abarcan desde el año 2000 al 2021. Se mostró que la variación de la puntuación PISA obtenida se ve afectada por el número de militares que hay en el país y el gasto en la educación con una correlación de 0.6 y 0.5 respectivamente en un intervalo de -1 a 1. 
+Se realizó análisis de componentes principales sobre índices sociales de México extraídos de Our World In Data, estos datos abarcan desde el año 2000 al 2021. Se mostró que la variación de la puntuación PISA obtenida se ve afectada por el número de militares que hay en el país y el gasto en la educación, con una correlación de 0.6 y 0.5 respectivamente en un intervalo de -1 a 1. 
 
 ## Cómo utilizar el repositorio
 
